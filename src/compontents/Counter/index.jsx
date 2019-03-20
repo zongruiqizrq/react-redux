@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Tooltip } from "antd";
 
 import "./style.scss";
@@ -31,9 +31,12 @@ class Counter extends React.Component {
             减1
           </button>
         </div>
-        <Tooltip placement="top" title={'to todolist'}>
-          <div className="jump">todoList</div>
-        </Tooltip>
+        <Link to="/todolist">
+          <Tooltip placement="top" title={'to todolist'}>
+            <div className="jump">todoList</div>
+          </Tooltip>
+        </Link>
+        
       </div>
     );
   }
