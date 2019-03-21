@@ -1,9 +1,20 @@
 import React from 'react'
+import { connect } from "react-redux";
 
-export default class Todolist extends React.Component {
+import './style.scss'
+
+ class Todolist extends React.Component {
+    componentWillMount(){
+      
+    }
     render() {
-        return <div>
-            <h1>dshg l</h1>
+        return <div className='page'>
+            <ul>
+                {this.props.state}
+            </ul>
         </div>
     }
 }
+export default connect(
+
+)(Todolist)
